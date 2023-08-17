@@ -1,0 +1,58 @@
+[
+  {
+    "id": "Black",
+    "title": "Black",
+    "render_as": "color",
+    "render_value": "#000000",
+    "children": [],
+    "sort": 2
+  },
+  {
+    "id": "Dark Blue",
+    "title": "Dark Blue",
+    "render_as": "color",
+    "render_value": "#1C2C3B",
+    "children": [],
+    "sort": 3
+  },
+  {
+    "id": "Green Premium Double Color",
+    "title": "Green Premium Double Color",
+    "render_as": "color",
+    "render_value": "#A0C2A1",
+    "children": [],
+    "sort": 1
+  },
+  {
+    "id": "Grey Premium",
+    "title": "Grey Premium",
+    "render_as": "color",
+    "render_value": "#404853",
+    "children": [],
+    "sort": 4
+  },
+  {
+    "id": "Vanilla Blue",
+    "title": "Vanilla Blue",
+    "render_as": "color",
+    "render_value": "#B0D8E0",
+    "children": [],
+    "sort": 5
+  },
+  {
+    "id": "White Premium Double Color",
+    "title": "White Premium Double Color",
+    "render_as": "color",
+    "render_value": "#FFFFFF",
+    "children": [],
+    "sort": 6
+  },
+  {
+    "id": "Silver Premium Double Color",
+    "title": "Silver Premium Double Color",
+    "render_as": "color",
+    "render_value": "#6D767B",
+    "children": [],
+    "sort": 0
+  }
+]

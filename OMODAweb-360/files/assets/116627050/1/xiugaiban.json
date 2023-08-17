@@ -1,0 +1,1 @@
+{"animation":{"version":4,"name":"Take 001","duration":1.17549e-38,"nodes":[{"name":"dizuo","defaults":{"p":[0,0,0],"r":[-90,-0,0],"s":[1,1,1]},"keys":[{"t":0}]},{"name":"ding","defaults":{"p":[0,0,0],"r":[-90,-0,0],"s":[1,1,1]},"keys":[{"t":0}]},{"name":"zhong","defaults":{"p":[0,0,0],"r":[90,7.01671e-15,180],"s":[1,1,1]},"keys":[{"t":0}]}]}}

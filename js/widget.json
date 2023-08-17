@@ -1,0 +1,98 @@
+{
+  "exterior": [
+    {
+      "name": "red",
+      "color": "#FF0000",
+      "items": [
+        "/images/360-red/1.jpg",
+        "/images/360-red/6.jpg",
+        "/images/360-red/12.jpg",
+        "/images/360-red/18.jpg",
+        "/images/360-red/24.jpg",
+        "/images/360-red/30.jpg",
+        "/images/360-red/36.jpg",
+        "/images/360-red/42.jpg",
+        "/images/360-red/47.jpg"
+      ]
+    },
+    {
+      "name": "gray",
+      "color": "#555555",
+      "active": true,
+      "items": [
+        "/images/360/1.jpg",
+        "/images/360/2.jpg",
+        "/images/360/3.jpg",
+        "/images/360/4.jpg",
+        "/images/360/5.jpg",
+        "/images/360/6.jpg",
+        "/images/360/7.jpg",
+        "/images/360/8.jpg",
+        "/images/360/9.jpg",
+        "/images/360/10.jpg",
+        "/images/360/11.jpg",
+        "/images/360/12.jpg",
+        "/images/360/13.jpg",
+        "/images/360/14.jpg",
+        "/images/360/15.jpg",
+        "/images/360/16.jpg",
+        "/images/360/17.jpg",
+        "/images/360/18.jpg",
+        "/images/360/19.jpg",
+        "/images/360/20.jpg",
+        "/images/360/21.jpg",
+        "/images/360/22.jpg",
+        "/images/360/23.jpg",
+        "/images/360/24.jpg",
+        "/images/360/25.jpg",
+        "/images/360/26.jpg",
+        "/images/360/27.jpg",
+        "/images/360/28.jpg",
+        "/images/360/29.jpg",
+        "/images/360/30.jpg",
+        "/images/360/31.jpg",
+        "/images/360/32.jpg",
+        "/images/360/33.jpg",
+        "/images/360/34.jpg",
+        "/images/360/35.jpg",
+        "/images/360/36.jpg",
+        "/images/360/37.jpg",
+        "/images/360/38.jpg",
+        "/images/360/39.jpg",
+        "/images/360/40.jpg",
+        "/images/360/41.jpg",
+        "/images/360/42.jpg",
+        "/images/360/43.jpg",
+        "/images/360/44.jpg",
+        "/images/360/45.jpg",
+        "/images/360/46.jpg",
+        "/images/360/47.jpg"
+      ]
+    }
+  ],
+  "interior": [
+    {
+      "name": "green",
+      "color": "#00FF00",
+      "active": true,
+      "items": [
+        "/images/360-red/1.jpg",
+        "/images/360-red/6.jpg",
+        "/images/360-red/12.jpg",
+        "/images/360-red/18.jpg",
+        "/images/360-red/24.jpg",
+        "/images/360-red/30.jpg",
+        "/images/360-red/36.jpg",
+        "/images/360-red/42.jpg",
+        "/images/360-red/47.jpg"
+      ]
+    },
+    {
+      "name": "blue",
+      "color": "#0000FF",
+      "items": [
+        "/images/360/1.jpg"
+      ]
+    }
+  ]
+}
