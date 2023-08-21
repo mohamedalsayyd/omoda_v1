@@ -247,16 +247,18 @@
         </div>
         <div class="information">
           <h3 class="line_title left">Information</h3>
-          <form class="form">
-            <div class="form_group mustwrite select">
+
+          <form class="form" onsubmit="sendEmail(); reset(); return false">
+            <!-- <div class="form_group mustwrite select">
               <select class="form_control" id="country"></select>
-            </div>
+            </div> -->
             <div class="form_group mustwrite">
               <input
                 type="text"
                 class="form_control"
                 id="name"
                 placeholder="Name"
+                required
               />
             </div>
             <div class="form_group mustwrite">
@@ -265,6 +267,7 @@
                 class="form_control"
                 id="phone"
                 placeholder="Phone"
+                required
               />
             </div>
             <div class="form_group mustwrite">
@@ -273,14 +276,15 @@
                 class="form_control"
                 id="email"
                 placeholder="E-mail"
+                required
               />
             </div>
-            <div class="form_group select isShow">
+            <!-- <div class="form_group select isShow">
               <select class="form_control" id="vehicleType">
                 <option value="">Vehicle Type</option>
                 <option value="">OMODA</option>
               </select>
-            </div>
+            </div> -->
             <div class="form_group isShow">
               <input
                 type="text"
@@ -309,10 +313,10 @@
             <p class="emailcheck">Please enter a valid email address!</p>
             <p class="failure">Email sent failure！</p>
           </div>
-          <!--<div class="message_box">
-						<span class="icon"></span>
-						<p>You have been delivery please do not repeat submitted！</p>
-					</div>-->
+          <div class="message_box">
+            <span class="icon"></span>
+            <p>You have been delivery please do not repeat submitted！</p>
+          </div>
         </div>
       </div>
     </main>
@@ -379,7 +383,7 @@
     <script src="../js/main.js?1662720074"></script>
     <script>
       $(function () {
-        init(); //初始化显示国家
+        init();
 
         function myrefresh() {
           window.location.reload();
@@ -527,5 +531,24 @@
       }
     </script>
     <script type="module" src="../js/app.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+      const userEmail = document.getElementById("email").value;
+
+      const sendEmail = () => {
+        Email.send({
+          Host: "smtp.gmail.com",
+          Username: "alsayyd.medo72@gmail.com",
+          Password: "spgqwoouadsxbzpn",
+          To: "bm7596524@gmail.com",
+          From: userEmail,
+          Subject: "This is the subject",
+          Body: "And this is the body",
+        })
+          .then((message) => alert(message))
+          .catch((error) => console.log(error));
+      };
+    </script>
+    <!-- <script src="../js/form.js"></script> -->
   </body>
 </html>

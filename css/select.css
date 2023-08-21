@@ -78,9 +78,15 @@ a[href="https://www.youtube.com/channel/UCLSFafFXWVfYS9qmOUTic4g"]
 }
 @media (max-width: 767px) and (max-width: 1365px) {
   .feature-slider__container.swiper-wrapper {
-    direction: initial;
+    direction: ltr;
   }
   .news-slider__container.swiper-wrapper {
-    direction: initial;
+    direction: ltr;
+  }
+  .feature-slider__container.swiper-wrapper > * {
+    direction: ltr;
+  }
+  .news-slider__container.swiper-wrapper > * {
+    direction: ltr;
   }
 }

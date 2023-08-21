@@ -1,4 +1,7 @@
 import translation from "./translation.js";
+const newsSlider = document.querySelector(
+  ".news-slider .news-slider__container"
+);
 const languageSelector = document.getElementById("slct");
 languageSelector.addEventListener("change", (event) => {
   localStorage.setItem("lang", event.target.value);
@@ -42,4 +45,10 @@ const setLanguage = (language) => {
       item.classList.remove("text-arabic");
     });
   }
+
+  // if (lang === "ar") {
+  //   newsSlider.classList.add("newsSlider");
+  // } else {
+  //   newsSlider.classList.remove("newsSlider");
+  // }
 };
