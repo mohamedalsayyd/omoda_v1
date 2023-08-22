@@ -6,6 +6,7 @@ const languageSelector = document.getElementById("slct");
 languageSelector.addEventListener("change", (event) => {
   localStorage.setItem("lang", event.target.value);
   setLanguage(event.target.value);
+  window.location.reload();
 });
 const languageSelectorMob = document.getElementById("moblieSelect");
 languageSelectorMob.addEventListener("change", (event) => {

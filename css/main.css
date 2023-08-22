@@ -5542,10 +5542,15 @@ section {
   resize: none;
   line-height: 36px;
 }
+input::placeholder,
+textarea::placeholder {
+  font-family: Raleway, "Tajawal", sans-serif;
+}
 .contact-us .form .form_textarea textarea::-webkit-input-placeholder {
   color: #a6a6a6;
 }
-.contact-us .form .submit {
+.contact-us .submit {
+  font-family: inherit;
   font-size: 24px;
   border: none;
   outline: none;
@@ -5575,7 +5580,6 @@ section {
   display: block;
   width: 16px;
   height: 10px;
-  background: url("../img/contact/select_down.png") no-repeat;
   background-size: 100% 100%;
   position: absolute;
   top: 50%;
@@ -5801,7 +5805,7 @@ section {
     height: 210px;
     line-height: 32px;
   }
-  .contact-us .form .submit {
+  .contact-us .submit {
     font-size: 20px;
     width: 120px;
     height: 40px;

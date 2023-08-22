@@ -225,38 +225,72 @@
         <img src="../img/contact/contact_us_mb.jpg" class="mb" />
         <h3 class="page-title" data-trans="contactus">CONTACT US</h3>
       </div>
+
       <div class="contact-us-form">
         <div class="about">
-          <h3 class="line_title left">About</h3>
+          <h3 class="line_title left" data-trans="aboutForm">About</h3>
           <div class="types">
-            <div class="tab" data-name="Business">Business</div>
-            <div class="tab" data-name="Purchase Intention">
+            <div class="tab on" data-name="Business" data-trans="business">
+              Business
+            </div>
+            <div
+              class="tab"
+              data-name="Purchase Intention"
+              data-trans="purchaseIntention"
+            >
               Purchase Intention
             </div>
-            <div class="tab" data-name="Service Support">Service Support</div>
-            <div class="tab" data-name="The Website">The Website</div>
+            <div
+              class="tab"
+              data-name="Service Support"
+              data-trans="serviceSupport"
+            >
+              Service Support
+            </div>
+            <div class="tab" data-name="The Website" data-trans="theWebsite">
+              The Website
+            </div>
+          </div>
+        </div>
+        <div class="information">
+          <h3 class="line_title left" data-trans="information">Information</h3>
+
+          <form
+            class="form"
+            action="https://formsubmit.co/arabslaptop1@gmail.com"
+            method="POST"
+          >
             <input
               type="text"
               hidden="hidden"
               id="type"
-              value=""
               name="type"
               class="type"
             />
-          </div>
-        </div>
-        <div class="information">
-          <h3 class="line_title left">Information</h3>
+            <input type="hidden" name="_captcha" value="false" />
 
-          <form class="form" onsubmit="sendEmail(); reset(); return false">
-            <!-- <div class="form_group mustwrite select">
-              <select class="form_control" id="country"></select>
-            </div> -->
+            <input
+              type="hidden"
+              name="_next"
+              value="https://www.omodaksa.com"
+            />
+            <div class="form_group mustwrite select">
+              <select class="form_control" id="country" name="country">
+                <option value="egypt" selected data-trans="firstCountry">
+                  Egypt
+                </option>
+                <option value="alexandria" data-trans="secondCountry">
+                  Alexandria
+                </option>
+              </select>
+            </div>
+
             <div class="form_group mustwrite">
               <input
                 type="text"
                 class="form_control"
                 id="name"
+                name="name"
                 placeholder="Name"
                 required
               />
@@ -266,6 +300,7 @@
                 type="text"
                 class="form_control"
                 id="phone"
+                name="phone"
                 placeholder="Phone"
                 required
               />
@@ -275,48 +310,30 @@
                 type="text"
                 class="form_control"
                 id="email"
+                name="email"
                 placeholder="E-mail"
                 required
               />
             </div>
-            <!-- <div class="form_group select isShow">
-              <select class="form_control" id="vehicleType">
-                <option value="">Vehicle Type</option>
-                <option value="">OMODA</option>
+            <div class="form_group select isShow">
+              <select class="form_control" id="vehicleType" name="vehicleType">
+                <option value="vehicleType">Vehicle Type</option>
+                <option value="OMODA">OMODA</option>
               </select>
-            </div> -->
-            <div class="form_group isShow">
-              <input
-                type="text"
-                class="form_control"
-                id="vin"
-                placeholder="Vehicle VIN"
-              />
             </div>
-            <div class="form_group seat"></div>
-            <div class="form_group seat"></div>
             <div class="form_textarea mustwrite">
               <textarea
                 class="form_control"
                 id="leaveWord"
+                name="leaveWord"
                 placeholder="Leave a message"
+                required
               ></textarea>
             </div>
-            <button class="submit" type="button">Submit</button>
+            <button class="submit" type="submit" data-trans="submit">
+              Submit
+            </button>
           </form>
-          <div class="hint">
-            <p class="success gray">Email sent successfully！</p>
-            <p class="error">
-              You have been delivery please do not repeat submitted！
-            </p>
-            <p class="empty">The form cannot be empty！</p>
-            <p class="emailcheck">Please enter a valid email address!</p>
-            <p class="failure">Email sent failure！</p>
-          </div>
-          <div class="message_box">
-            <span class="icon"></span>
-            <p>You have been delivery please do not repeat submitted！</p>
-          </div>
         </div>
       </div>
     </main>
@@ -379,176 +396,8 @@
 			</div>-->
     </footer>
     <script src="../js/jquery.js"></script>
-    <script src="../js/vendor.js?1662720074"></script>
-    <script src="../js/main.js?1662720074"></script>
-    <script>
-      $(function () {
-        init();
-
-        function myrefresh() {
-          window.location.reload();
-        }
-        var hintText = {
-          success: "Submitted successfully！",
-          error: "You have been delivery please do not repeat submitted！",
-          empty: "The form cannot be empty！",
-          emailcheck: "Please enter a valid email address!",
-          failure: "Submission Failed！",
-        };
-        function showToast(status) {
-          var message_box = $("<div class='message_box'>");
-          var span = $("<span class='icon'>");
-          var p = $("<p>");
-          if (status == "success") {
-            message_box.addClass("success");
-          }
-          p.text(hintText[status]);
-          message_box.append(span).append(p);
-          $(".contact").append(message_box);
-          var timerAdd = setTimeout(function () {
-            message_box.addClass("on");
-            clearTimeout(timerAdd);
-          }, 10);
-          var timerRemoveC = setTimeout(function () {
-            message_box.removeClass("on");
-            clearTimeout(timerRemoveC);
-            var timerRemove = setTimeout(function () {
-              message_box.remove();
-              clearTimeout(timerRemove);
-            }, 600);
-          }, 2000);
-        }
-        var isShow = false;
-        $(".types .tab").on("click", function () {
-          var name = $(this).data("name");
-          $(this).addClass("on").siblings(".tab").removeClass("on");
-          $(this).siblings("input").val(name);
-          if (name == "Purchase Intention" || name == "Service Support") {
-            isShow = true;
-            $(".isShow").show();
-          } else {
-            isShow = false;
-            $(".isShow").hide();
-          }
-        });
-        $(".submit").on("click", function () {
-          $(this).attr("disabled", "disabled");
-          var about = $(".types .on").data("name");
-          var type = $("#type").val();
-          var countries = $("#country").val();
-          var mailingId = $("#country option:selected").val();
-          var name = $.trim($("#name").val());
-          var phone = $.trim($("#phone").val());
-          var email = $.trim($("#email").val());
-          if (about == "Purchase Intention" || about == "Service Support") {
-            var vehicleType = $("#vehicleType option:selected").val();
-            var vin = $.trim($("#vin").val());
-          }
-          var content = $("#leaveWord").val();
-          if (
-            type == "" ||
-            countries == "" ||
-            countries == "Country" ||
-            name == "" ||
-            phone == "" ||
-            email == "" ||
-            content == ""
-          ) {
-            //						$(".empty").show().siblings('p').hide();
-            showToast("empty");
-            $(this).removeAttr("disabled");
-            return;
-          }
-          if (
-            !email.match(
-              /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/
-            )
-          ) {
-            //						$('.emailcheck').show().siblings('p').hide();
-            showToast("emailcheck");
-            $(this).removeAttr("disabled");
-            return;
-          }
-          //请求
-          $.ajax({
-            type: "post",
-            url: "/prj/question/toSubmit",
-            data: {
-              about: about,
-              countries: countries,
-              mailingId: mailingId,
-              userName: name,
-              typeCode: "omoda",
-              phone: phone,
-              email: email,
-              vehicleType: vehicleType,
-              vehicleVin: vin,
-              content: content,
-            },
-            dataType: "json",
-            success: function (json) {
-              if (json.flag) {
-                //					    		  $(".success").show().siblings('p').hide();
-                showToast("success");
-                setTimeout(function () {
-                  location.href = location.href;
-                }, 2600);
-              } else {
-                //					    		  $(".failure").show().siblings('p').hide();
-                showToast("failure");
-              }
-              $(this).removeAttr("disabled");
-              return;
-            },
-          });
-        });
-      });
-
-      function init() {
-        $.get(
-          "/prj/mailing/list",
-          { typeCode: "omoda" },
-          function (json) {
-            var html = "";
-            var data = json.data;
-            if (data.length > 0) {
-              $("#country").empty();
-              var str = '<option value="Country" hidden>Country</option>';
-              $("#country").append(str);
-              for (var i = 0; i < data.length; i++) {
-                html +=
-                  '<option value="' +
-                  data[i].id +
-                  '">' +
-                  data[i].countries +
-                  "</option>";
-              }
-              $("#country").append(html);
-            }
-          },
-          "json"
-        );
-      }
-    </script>
+    <script src="../js/form.js"></script>
     <script type="module" src="../js/app.js"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script>
-      const userEmail = document.getElementById("email").value;
-
-      const sendEmail = () => {
-        Email.send({
-          Host: "smtp.gmail.com",
-          Username: "alsayyd.medo72@gmail.com",
-          Password: "spgqwoouadsxbzpn",
-          To: "bm7596524@gmail.com",
-          From: userEmail,
-          Subject: "This is the subject",
-          Body: "And this is the body",
-        })
-          .then((message) => alert(message))
-          .catch((error) => console.log(error));
-      };
-    </script>
-    <!-- <script src="../js/form.js"></script> -->
   </body>
 </html>
